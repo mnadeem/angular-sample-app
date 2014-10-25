@@ -1,7 +1,7 @@
 module.exports = {
   options: {
     base: 'app',
-    module: 'crp.dhha.app.templates',
+    module: 'sample-app-templates',
     singleModule: true,
     useStrict: true,
     htmlmin: {
