@@ -23,12 +23,8 @@ angular.module('sample-app.components.confirmation.directives')
 		        	 element.bind('click', function() {
 		                 var message = attrs.ngReallyMessage || "Are you sure ?";
 
-		                 //*This doesn't works
-		                 var modalHtml = '<div><div class="row"><div class="columns">' + message + '</div></div><div class="row"><div class="small-5 columns"><button type="button" class="button right" ng-click="cancel()">Cancel</button></div><div class="small-5 columns"><button type="button" class="button primary left" ng-click="ok()">Confirm</button></div</div></div>';
-
 		                 var modalInstance = $modal.open({
 		                	 templateUrl: 'src/components/confirmation/confirmation.tpl.html',
-		                	 //template: modalHtml,
 		                	 resolve: {
 	                	        confirmationMessage: function () {
 	                	          return message;
