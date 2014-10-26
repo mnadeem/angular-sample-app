@@ -19,6 +19,7 @@
     'ui.router',
     'ngSanitize',
 	'sample-app-templates',
-	'ui.bootstrap'
+	'ui.bootstrap',
+	'sample-app.plan'
   ]);
 })();
