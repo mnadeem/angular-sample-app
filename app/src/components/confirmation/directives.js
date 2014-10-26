@@ -12,7 +12,7 @@
  */
 
 angular.module('sample-app.components.confirmation.directives')
-	.directive('ngReallyClick',['$log', '$modal', '$parse', function factory($log, $rcModal, $parse) {
+	.directive('ngReallyClick',['$log', '$modal', '$parse', function factory($log, $modal, $parse) {
 		var directiveDefinitionObject = {
 				restrict: 'A',
 		        scope:{
