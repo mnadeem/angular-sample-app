@@ -18,13 +18,13 @@ angular.module('sample-app.components.confirmation.directives')
 		        scope:{
 		          ngReallyClick:"&"
 		        },
-		        //templateUrl: 'src/components/confirmation/confirmation.tpl.html',
 		        link: function(scope, element, attrs) {
 		        	 element.bind('click', function() {
 		                 var message = attrs.ngReallyMessage || "Are you sure ?";
 
 		                 var modalInstance = $modal.open({
 		                	 templateUrl: 'src/components/confirmation/confirmation.tpl.html',
+		                	 size: 'sm',
 		                	 resolve: {
 	                	        confirmationMessage: function () {
 	                	          return message;
