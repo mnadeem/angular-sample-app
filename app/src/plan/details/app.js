@@ -12,7 +12,7 @@
  * Plan details controller module.
  */
  angular
-  .module('sample-app.plan.details.controllers');
+  .module('sample-app.plan.details.controllers',[]);
 
 /**
  * @ngdoc overview

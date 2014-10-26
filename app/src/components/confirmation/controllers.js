@@ -10,8 +10,9 @@
  */
 
 angular.module('sample-app.components.confirmation.controllers')
-	.controller('modalInstanceCtrl',['$scope', '$modalInstance', function($scope, $modalInstance) {
-		 $scope.ok = function() {
+	.controller('modalInstanceCtrl',['$scope', '$modalInstance', 'confirmationMessage', function($scope, $modalInstance, confirmationMessage) {
+		$scope.message = confirmationMessage;
+		$scope.ok = function() {
 	            $modalInstance.close(true);
           };
 
