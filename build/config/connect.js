@@ -11,8 +11,10 @@ module.exports = {
       middleware: function (connect) {
     	  var middlewares = [];
 
+          middlewares.push(require('grunt-connect-proxy/lib/utils').proxyRequest);
+
           // Serve static files.
-          
+
           middlewares.push(connect.static(require('path').resolve('.tmp')));
           middlewares.push(connect().use('/vendor', connect.static(require('path').resolve('./vendor'))));
           middlewares.push(connect.static(require('path').resolve('app')));
@@ -23,9 +25,12 @@ module.exports = {
   },
   test: {
     options: {
-      port: 9001,
+      port: '<%= appConfig.ports.test %>',
       middleware: function (connect) {
     	  var middlewares = [];
+
+          middlewares.push(require('grunt-connect-proxy/lib/utils').proxyRequest);
+
           // Serve static files.
           middlewares.push(connect.static(require('path').resolve('.tmp')));
           middlewares.push(connect.static(require('path').resolve('test')));

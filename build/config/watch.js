@@ -4,19 +4,19 @@ module.exports = {
     tasks: ['wiredep']
   },
   htmlTmpl: {
-    files: 'app/src/**/*.tpl.html',
+    files: '<%= appConfig.paths.app %>/src/**/*.tpl.html',
     tasks: ['html2js'],
     options: {
-      livereload: '<%= connect.options.livereload %>'
+      livereload: '<%= appConfig.ports.livereload %>'
     }
   },
   js: {
-    files: ['<%= appConfig.paths.app %>/src/{,*/}*.js',
+    files: ['<%= appConfig.paths.app %>/src/**/*.js',
       '<%= appConfig.paths.temp %>/generated/scripts/templates.js'
     ],
     tasks: ['newer:jshint:all'],
     options: {
-      livereload: '<%= connect.options.livereload %>'
+      livereload: '<%= appConfig.ports.livereload %>'
     }
   },
   jsTest: {
@@ -32,7 +32,7 @@ module.exports = {
   },
   livereload: {
     options: {
-      livereload: '<%= connect.options.livereload %>'
+      livereload: '<%= appConfig.ports.livereload %>'
     },
     files: ['<%= appConfig.paths.app %>/{,*/}*.html',
       '<%= appConfig.paths.temp %>/styles/{,*/}*.css',

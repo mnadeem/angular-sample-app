@@ -4,8 +4,8 @@ module.exports = {
     exclude: ['doNotTest.js'],
     options: {
       breakOnErrors: true,
-      jsLintXML: 'jslint-report.xml',
-      checkstyleXML: 'checkstyle.xml',
+      jsLintXML: 'reports/jslint/jslint-report.xml',
+      checkstyleXML: 'reports/jslint/checkstyle.xml',
       errorsOnly: false,
       cyclomatic: [3, 7, 12],
       halstead: [8, 13, 20],

@@ -3,9 +3,11 @@ serve:
   - 'concurrent:server'
   - 'autoprefixer'
   - 'html2js'
+  - 'configureProxies'
   - 'connect:livereload'
   - 'watch'  
 test:
+  - 'clean:reports'
   - 'clean:server'
   - 'concurrent:test'
   - 'autoprefixer'
@@ -29,3 +31,7 @@ default:
   - 'newer:jshint'
   - 'test'
   - 'build'
+ci:
+  - 'test'
+  - 'jscpd'
+  - 'plato'

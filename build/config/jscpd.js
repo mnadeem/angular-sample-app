@@ -1,5 +1,6 @@
 module.exports = {
   javascript: {
-    path: 'app/src'
+    path: 'app/src',
+    output : 'reports/cpd.xml'
   }
 };
